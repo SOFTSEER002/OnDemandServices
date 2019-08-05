@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#F97544</color>
+    <color name="darkorange">#E76434</color>
+    <color name="colorPrimaryDark">#615D5B</color>
+    <color name="colorAccent">#F97544</color>
+    <color name="orange">#F97544</color>
+    <color name="toolbar">#504A47</color>
+    <color name="textcolor">#706A67</color>
+    <color name="viewcolor">#D3D0D0</color>
+</resources>
