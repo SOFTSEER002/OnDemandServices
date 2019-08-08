@@ -18,69 +18,30 @@ TextView tv_type_service;
         tv_type_service=findViewById(R.id.tv_type_service);
 
         String categoryy=getIntent().getStringExtra("CategoryType");
-        if(categoryy.equals("house")){
-            tv_type_service.setText("House Cleaning");
+        if(categoryy.equals("women")){
+            tv_type_service.setText("Salon at Home for Women");
         }
 
-        if(categoryy.equals("office")){
-            tv_type_service.setText("Office Cleaning");
-        }
-        if(categoryy.equals("car")){
-            tv_type_service.setText("Car wash");
-        }
-        if(categoryy.equals("laundry")){
-            tv_type_service.setText("Laundry and Dry cleaning");
-        }
-        if(categoryy.equals("ac")){
-            tv_type_service.setText("AC Service");
-        }
-        if(categoryy.equals("geyser")){
-            tv_type_service.setText("Geyser Service");
-        }
-        if(categoryy.equals("tv")){
-            tv_type_service.setText("LED TV Repair");
-        }
-        if(categoryy.equals("washing")){
-            tv_type_service.setText("Washing machine Repair");
-        }
-        if(categoryy.equals("refrigerator")){
-            tv_type_service.setText("Refrigerator Repair");
-        }
-        if(categoryy.equals("ro")){
-            tv_type_service.setText("RO Service");
-        }
-        if(categoryy.equals("bridal")){
-            tv_type_service.setText("Bridal Makeup");
-        }
         if(categoryy.equals("men")){
-            tv_type_service.setText("Men Salon");
+            tv_type_service.setText("Salon at Home for Men");
         }
-        if(categoryy.equals("women")){
-            tv_type_service.setText("House Cleaning");
+        if(categoryy.equals("cleaning")){
+            tv_type_service.setText("Cleaning");
         }
         if(categoryy.equals("electrician")){
-            tv_type_service.setText("House Cleaning");
+            tv_type_service.setText("Laundry and Dry cleaning");
         }
-        if(categoryy.equals("plumber")){
-            tv_type_service.setText("Women Salon");
+        if(categoryy.equals("massage")){
+            tv_type_service.setText("AC Service");
         }
-        if(categoryy.equals("carpenter")){
-            tv_type_service.setText("Carpenter");
+        if(categoryy.equals("yoga")){
+            tv_type_service.setText("Geyser Service");
         }
-        if(categoryy.equals("photography")){
-            tv_type_service.setText("Photography");
+        if(categoryy.equals("painting")){
+            tv_type_service.setText("LED TV Repair");
         }
-        if(categoryy.equals("transportation")){
-            tv_type_service.setText("House Cleaning");
-        }
-        if(categoryy.equals("website")){
-            tv_type_service.setText("Website Development");
-        }
-        if(categoryy.equals("app")){
-            tv_type_service.setText("App Development");
-        }
-        if(categoryy.equals("design")){
-            tv_type_service.setText("Website Design");
+        if(categoryy.equals("pest")){
+            tv_type_service.setText("Washing machine Repair");
         }
 
 

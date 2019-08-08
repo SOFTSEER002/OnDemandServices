@@ -1,6 +1,7 @@
 package com.example.ondemandapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import com.example.ondemandapp.adapter.GridServiceAdapter;
@@ -16,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,8 +28,9 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
    // GridView gv_category;
+    TextView tv_txtt1,tv_txtt2;
     List<GridServicesModel> servicelist = new ArrayList<>();
-    LinearLayout ll1,ll2,ll3,ll4,ll5,ll6,ll7,ll8,ll9,ll10,ll11,ll12,ll13,ll14,ll15,ll16,ll17,ll18,ll19,ll20,ll21;
+    LinearLayout ll_women,ll_men,ll_cleaning,ll_electrician,ll_appliances,ll_massage,ll_yoga,ll_painting,ll_pest;
    //GridServiceAdapter serviceAdapter;
 
     private static ViewPager mPager;
@@ -44,6 +47,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         BottomNavigationView navView = findViewById(R.id.nav_view);
         mPager = findViewById(R.id.pager);
+        tv_txtt1 = findViewById(R.id.tv_txtt1);
+        tv_txtt2 = findViewById(R.id.tv_txtt2);
+
+        Typeface custom_font = Typeface.createFromAsset(getAssets(), "font/font.ttf");
+        //tv_txtt1.setTypeface(custom_font);
+        //tv_txtt2.setTypeface(custom_font);
         //gv_category = findViewById(R.id.gv_category);
 
        // ll_resources = findViewById(R.id.ll_resources);
@@ -54,50 +63,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
        // ll_business.setOnClickListener(this);
       //  ll_resources.setOnClickListener(this);
 
-        ll1=findViewById(R.id.ll1);
-        ll2=findViewById(R.id.ll2);
-        ll3=findViewById(R.id.ll3);
-        ll4=findViewById(R.id.ll4);
-        ll5=findViewById(R.id.ll5);
-        ll6=findViewById(R.id.ll6);
-        ll7=findViewById(R.id.ll7);
-        ll8=findViewById(R.id.ll8);
-        ll9=findViewById(R.id.ll9);
-        ll10=findViewById(R.id.ll10);
-        ll11=findViewById(R.id.ll11);
-        ll12=findViewById(R.id.ll12);
-        ll13=findViewById(R.id.ll13);
-        ll14=findViewById(R.id.ll14);
-        ll15=findViewById(R.id.ll15);
-        ll16=findViewById(R.id.ll16);
-        ll17=findViewById(R.id.ll17);
-        ll18=findViewById(R.id.ll18);
-        ll19=findViewById(R.id.ll19);
-        ll20=findViewById(R.id.ll20);
-        ll21=findViewById(R.id.ll21);
+        ll_women=findViewById(R.id.ll_women);
+        ll_men=findViewById(R.id.ll_men);
+        ll_cleaning=findViewById(R.id.ll_cleaning);
+        ll_electrician=findViewById(R.id.ll_electrician);
+        ll_appliances=findViewById(R.id.ll_appliances);
+        ll_massage=findViewById(R.id.ll_massage);
+        ll_yoga=findViewById(R.id.ll_yoga);
+        ll_painting=findViewById(R.id.ll_painting);
+        ll_pest=findViewById(R.id.ll_pest);
 
-        ll1.setOnClickListener(this);
-        ll2.setOnClickListener(this);
-        ll3.setOnClickListener(this);
-        ll4.setOnClickListener(this);
-        ll5.setOnClickListener(this);
-        ll6.setOnClickListener(this);
-        ll7.setOnClickListener(this);
-        ll8.setOnClickListener(this);
-        ll9.setOnClickListener(this);
-        ll10.setOnClickListener(this);
-        ll11.setOnClickListener(this);
-        ll12.setOnClickListener(this);
-        ll13.setOnClickListener(this);
-        ll14.setOnClickListener(this);
-        ll15.setOnClickListener(this);
-        ll16.setOnClickListener(this);
-        ll17.setOnClickListener(this);
-        ll18.setOnClickListener(this);
-        ll19.setOnClickListener(this);
-        ll20.setOnClickListener(this);
-        ll21.setOnClickListener(this);
-
+        ll_women.setOnClickListener(this);
+        ll_men.setOnClickListener(this);
+        ll_cleaning.setOnClickListener(this);
+        ll_electrician.setOnClickListener(this);
+        ll_appliances.setOnClickListener(this);
+        ll_massage.setOnClickListener(this);
+        ll_yoga.setOnClickListener(this);
+        ll_painting.setOnClickListener(this);
+        ll_pest.setOnClickListener(this);
 
 
         for (int i = 0; i < IMAGES.length; i++) {
@@ -193,6 +177,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     startActivity(new Intent(MainActivity.this, SettingActivity.class));
 
                     return true;
+
+
+
             }
             return false;
         }
@@ -219,126 +206,58 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(i);
                 break;*/
 
-            case R.id.ll1:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "house");
+            case R.id.ll_women:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "women");
                 startActivity(i);
                 break;
-            case R.id.ll2:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "office");
-                startActivity(i);
-                break;
-
-            case R.id.ll3:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "car");
-                startActivity(i);
-                break;
-
-            case R.id.ll4:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "laundry");
-                startActivity(i);
-                break;
-
-            case R.id.ll5:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "ac");
-                startActivity(i);
-                break;
-            case R.id.ll6:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "geyser");
-                startActivity(i);
-                break;
-
-            case R.id.ll7:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "tv");
-                startActivity(i);
-                break;
-
-            case R.id.ll8:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "washing");
-                startActivity(i);
-                break;
-
-            case R.id.ll9:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "refrigerator");
-                startActivity(i);
-                break;
-
-            case R.id.ll10:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "ro");
-                startActivity(i);
-                break;
-            case R.id.ll11:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "bridal");
-                startActivity(i);
-                break;
-
-            case R.id.ll12:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
+            case R.id.ll_men:
+                i = new Intent(MainActivity.this, TabListActivity.class);
                 i.putExtra("CategoryType", "men");
                 startActivity(i);
                 break;
 
-            case R.id.ll13:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "women");
+            case R.id.ll_cleaning:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "cleaning");
                 startActivity(i);
                 break;
 
-            case R.id.ll14:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
+            case R.id.ll_appliances:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "appliances");
+                startActivity(i);
+                break;
+
+            case R.id.ll_electrician:
+                i = new Intent(MainActivity.this, TabListActivity.class);
                 i.putExtra("CategoryType", "electrician");
                 startActivity(i);
                 break;
 
-            case R.id.ll15:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "plumber");
+            case R.id.ll_massage:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "massage");
+                startActivity(i);
+                break;
+            case R.id.ll_yoga:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "yoga");
                 startActivity(i);
                 break;
 
-            case R.id.ll16:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "carpenter");
+            case R.id.ll_painting:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "painting");
                 startActivity(i);
                 break;
 
-            case R.id.ll17:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "photography");
-                startActivity(i);
-                break;
-            case R.id.ll18:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "transportation");
+            case R.id.ll_pest:
+                i = new Intent(MainActivity.this, TabListActivity.class);
+                i.putExtra("CategoryType", "pest");
                 startActivity(i);
                 break;
 
-            case R.id.ll19:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "website");
-                startActivity(i);
-                break;
-            case R.id.ll20:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "app");
-                startActivity(i);
-                break;
-
-            case R.id.ll21:
-                i = new Intent(MainActivity.this, SingleDetailActivity.class);
-                i.putExtra("CategoryType", "design");
-                startActivity(i);
-                break;
 
 
 

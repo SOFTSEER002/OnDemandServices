@@ -71,6 +71,7 @@
             android:layout_weight="0.05"/>
 
         <TextView
+            android:id="@+id/tv_privacy"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -112,6 +113,7 @@
             android:layout_weight="0.05"/>
 
         <TextView
+            android:id="@+id/tv_terms"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -154,6 +156,7 @@
             android:layout_weight="0.05"/>
 
         <TextView
+            android:id="@+id/tv_contactus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
@@ -196,6 +199,7 @@
             android:layout_weight="0.05"/>
 
         <TextView
+            android:id="@+id/tv_aboutus"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"

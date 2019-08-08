@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/ll_singlelayout"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="70dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="69dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.03"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="0.17"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            app:cardCornerRadius="5dp">
+
+            <ImageView
+                android:id="@+id/iv_women"
+                android:layout_width="match_parent"
+                android:src="@drawable/women_salon"
+                android:scaleType="fitXY"
+                android:layout_gravity="center"
+                android:layout_height="match_parent" />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+
+
+        <TextView
+            android:id="@+id/tv_women"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:textColor="@android:color/black"
+            android:fontFamily="sans-serif"
+            android:textSize="16dp"
+            android:layout_gravity="center"
+            android:text="Salon at home for Women"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/viewcolor"/>
+
+</LinearLayout>
