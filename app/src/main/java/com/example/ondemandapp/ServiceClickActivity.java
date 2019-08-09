@@ -78,12 +78,12 @@ public class ServiceClickActivity extends AppCompatActivity {
         }
         if (serviceid.equals("11")) {
             tv3_toolbar.setText("Electricians");
-            servicelist.add(new ServiceClickModel("Fan", R.drawable.men_haircut, "13"));
-            servicelist.add(new ServiceClickModel("Switches \u0026 Sockets", R.drawable.men_haircut, "14"));
-            servicelist.add(new ServiceClickModel("Lights", R.drawable.men_haircut, "15"));
-            servicelist.add(new ServiceClickModel("MCB \u0026 Fuse", R.drawable.men_haircut, "16"));
-            servicelist.add(new ServiceClickModel("Smart device Installation", R.drawable.men_haircut, "17"));
-            servicelist.add(new ServiceClickModel("Geyser", R.drawable.men_haircut, "18"));
+            servicelist.add(new ServiceClickModel("Fan", R.drawable.fan, "13"));
+            servicelist.add(new ServiceClickModel("Switches \u0026 Sockets",R.drawable.switchhh, "14"));
+            servicelist.add(new ServiceClickModel("Lights", R.drawable.lights, "15"));
+            servicelist.add(new ServiceClickModel("MCB \u0026 Fuse", R.drawable.mcb, "16"));
+            servicelist.add(new ServiceClickModel("Smart device Installation", R.drawable.smart_device, "17"));
+            servicelist.add(new ServiceClickModel("Geyser", R.drawable.geyser_repair, "18"));
 
             gridServiceAdapter = new ServiceClickAdapter(ServiceClickActivity.this, servicelist);
             gv_services.setAdapter(gridServiceAdapter);
@@ -130,112 +130,133 @@ public class ServiceClickActivity extends AppCompatActivity {
         if (serviceid.equals("5")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Kitchen Deep Cleaning");
+            tv3_toolbar.setText("Bathroom Deep Cleaning");
+
         }
 
         if (serviceid.equals("6")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Sofa Cleaning");
+            tv3_toolbar.setText("Kitchen Deep Cleaning");
+
         }
         if (serviceid.equals("7")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Home Deep Cleaning");
+            tv3_toolbar.setText("Sofa Cleaning");
+
         }
         if (serviceid.equals("8")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Car Cleaning");
+            tv3_toolbar.setText("Home Deep Cleaning");
+
         }
         if (serviceid.equals("9")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Carpet Cleaning");
+            tv3_toolbar.setText("Car Cleaning");
         } if (serviceid.equals("10")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Electricians");
+            tv3_toolbar.setText("Carpet Cleaning");
+
         }
         if (serviceid.equals("14")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Plumbers");
+            tv3_toolbar.setText("RO or Water Purifier Repair");
         }
         if (serviceid.equals("15")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Carpenters");
+            tv3_toolbar.setText("Refrigerator Repair");
+
         } if (serviceid.equals("16")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Washing Machine Repair");
+
         } if (serviceid.equals("17")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Microwave Repair");
+
         } if (serviceid.equals("18")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Television Repair \u0026 Installation");
+
         } if (serviceid.equals("19")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Geyser / Water Heater Repair");
+
         }
         if (serviceid.equals("20")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("AC Service \u0026 Repair");
+
         } if (serviceid.equals("21")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Chimney Cleaning \u0026 Repair");
+
         } if (serviceid.equals("22")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Laptop Repair");
+
+
+
         } if (serviceid.equals("23")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("IPad, Mac Repair");
+
+
         }
         if (serviceid.equals("24")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Mobile Screen Repair");
         } if (serviceid.equals("25")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Computer Repair");
+
         } if (serviceid.equals("26")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Mixer \u0026 Grinder Repair");
+
         } if (serviceid.equals("27")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Massage for Men");
+
         }
         if (serviceid.equals("28")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Massage for Women");
+
         }
         if (serviceid.equals("29")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Fitness Trainer at Home");
         }
         if (serviceid.equals("30")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("Yoga Trainer at Home");
         }
         if (serviceid.equals("31")){
             ll_grid.setVisibility(View.GONE);
             iv_banner.setVisibility(View.GONE);
-            tv3_toolbar.setText("Pest Control");
+            tv3_toolbar.setText("House Painters");
         }
         if (serviceid.equals("32")){
             ll_grid.setVisibility(View.GONE);

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF7F7"
+    android:orientation="vertical"
+    tools:context=".SummaryActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/iv_summary_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.08"
+                android:padding="4dp"
+                android:src="@drawable/backarrow_black" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:id="@+id/tv5_toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.83"
+                android:fontFamily="sans-serif"
+                android:text="Salon at home for Women"
+                android:textColor="#6D6666"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.75">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="3dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Summary"
+                    android:textSize="18dp"
+                    android:textColor="@android:color/black"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Item total"
+                        android:textColor="@color/textcolor"
+                        android:textSize="13dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.6"/>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="\u20B9 1,485"
+                            android:gravity="center"
+                            android:textSize="13dp"
+                            android:textColor="@color/textcolor"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="43dp"
+                            android:layout_height="0.05dp"
+                            android:layout_gravity="center"
+                            android:background="@color/textcolor"/>
+                    </FrameLayout>
+                    <TextView
+                        android:id="@+id/tv_totall"
+                        android:layout_width="0dp"
+                        android:text="\u20B9 620"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:textColor="@color/textcolor"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginTop="5dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Subtotal"
+                        android:textColor="#363433"
+                        android:textSize="13dp"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"/>
+
+                    <TextView
+                        android:id="@+id/tv_total_summary"
+                        android:layout_width="0dp"
+                        android:text="\u20B9 620"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:textColor="#363433"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"/>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:paddingTop="15dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wax \u0026 Groom"
+                    android:textColor="@android:color/black"
+                    android:textSize="13dp"
+                    android:fontFamily="sans-serif"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12dp"
+                    android:layout_marginTop="5dp"
+                    android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+                    android:textColor="@color/textcolor"
+                    android:drawablePadding="10dp"
+                    android:text="Full Arms Wax including Underarms(Honey)"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+                    android:textColor="@color/textcolor"
+                    android:drawablePadding="10dp"
+                    android:text="Eyebrows Threading"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12dp"
+                    android:layout_marginTop="2dp"
+                    android:drawableLeft="@drawable/ic_brightness_1_black_24dp"
+                    android:textColor="@color/textcolor"
+                    android:drawablePadding="10dp"
+                    android:text="Face \u0026 Neck Detan"
+                    android:layout_height="wrap_content" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tv_single_price"
+                        android:layout_width="0dp"
+                        android:text="\u20B9 620"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:textColor="@color/textcolor"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.15"/>
+
+                    <FrameLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="\u20B9 1,485"
+                            android:gravity="center"
+                            android:textSize="13dp"
+                            android:textColor="@color/textcolor"
+                            android:layout_gravity="center"
+                            android:layout_height="wrap_content" />
+
+                        <View
+                            android:layout_width="43dp"
+                            android:layout_height="0.05dp"
+                            android:layout_gravity="center"
+                            android:background="@color/textcolor"/>
+                    </FrameLayout>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.35"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:gravity="center"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.3">
+                        <LinearLayout
+                            android:id="@+id/ll_increment"
+                            android:layout_width="77dp"
+                            android:visibility="gone"
+                            android:layout_height="35dp"
+                            android:background="@drawable/increment_back"
+                            android:orientation="horizontal"
+                            android:weightSum="1.2">
+
+                            <ImageView
+                                android:id="@+id/iv_minus"
+                                android:layout_width="0dp"
+                                android:layout_height="11dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:src="@drawable/remove" />
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="33dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:background="@android:color/white"
+                                android:gravity="center">
+
+                                <TextView
+                                    android:id="@+id/tv_count"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:fontFamily="sans-serif"
+                                    android:text="1"
+                                    android:textColor="#172EE2"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/iv_add"
+                                android:layout_width="0dp"
+                                android:layout_height="11dp"
+                                android:layout_gravity="center"
+                                android:layout_weight="0.4"
+                                android:src="@drawable/white_add" />
+
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/viewcolor"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:orientation="horizontal"
+                    android:weightSum="1"
+                    android:paddingBottom="20dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:text="Item Total"
+                        android:textColor="@android:color/black"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"/>
+
+                    <TextView
+                        android:id="@+id/tv_final_total"
+                        android:layout_width="0dp"
+                        android:text="\u20B9 620"
+                        android:gravity="center"
+                        android:textSize="13dp"
+                        android:textStyle="bold"
+                        android:textColor="@android:color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.2"/>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@color/viewcolor"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="0.25">
+
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_marginLeft="15dp"
+               android:layout_marginRight="15dp"
+               android:gravity="center"
+               android:textStyle="bold"
+               android:textSize="13dp"
+               android:fontFamily="sans-serif"
+               android:textColor="@android:color/white"
+               android:text="View Membership"
+               android:background="@drawable/button_back"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textSize="13dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@android:color/black"
+                android:text="Skip"
+                android:background="@drawable/skip_back"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

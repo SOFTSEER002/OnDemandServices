@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEBEB"
+    android:orientation="vertical"
+    tools:context=".SingleServiceListActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ImageView
+                android:id="@+id/iv_servicelist_back"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.08"
+                android:padding="4dp"
+                android:src="@drawable/backarrow_black" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.05" />
+
+            <TextView
+                android:id="@+id/tv5_toolbar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="0.83"
+                android:fontFamily="sans-serif"
+                android:textColor="#6D6666"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!--<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_packages"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </LinearLayout>-->
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.91"
+            android:orientation="vertical">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:fontFamily="sans-serif"
+                        android:text="Wax"
+                        android:textColor="@android:color/black"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="15dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_showwphotos"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Quick Fix"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="\u20B9 "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold"
+                                            />
+                                        <TextView
+                                            android:id="@+id/tv1_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="780"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold" />
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="5dp">
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif"
+                                                android:text="\u20B9 1700"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13dp"
+                                                android:textStyle="bold" />
+
+                                            <View
+                                                android:layout_width="40dp"
+                                                android:layout_height="1dp"
+                                                android:layout_gravity="center"
+                                                android:background="@android:color/black" />
+                                        </FrameLayout>
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="4dp"
+                                            app:srcCompat="@drawable/ic_brightness_1_black_24dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="56 % off"
+                                            android:textColor="#08AD0F"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="85 min"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="11dp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.3"
+                                    android:gravity="center">
+
+                                    <FrameLayout
+                                        android:layout_width="73dp"
+                                        android:layout_height="35dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_add_service"
+                                            android:layout_width="73dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/add_back"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.7"
+                                                android:gravity="center"
+                                                android:text="ADD"
+                                                android:textColor="#172EE2" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="31dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginRight="3dp"
+                                                android:layout_weight="0.3"
+                                                android:background="#ECE6E6">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="12dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/add_icon" />
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/ll_increment"
+                                            android:layout_width="73dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/increment_back"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone"
+                                            android:weightSum="1">
+
+                                            <ImageView
+                                                android:id="@+id/iv_minus"
+                                                android:layout_width="0dp"
+                                                android:layout_height="11dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.3"
+                                                android:src="@drawable/remove" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="33dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.4"
+                                                android:background="@android:color/white"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:id="@+id/tv_count"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:fontFamily="sans-serif"
+                                                    android:text="1"
+                                                    android:textColor="#172EE2"
+                                                    android:textSize="14dp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:id="@+id/iv_add"
+                                                android:layout_width="0dp"
+                                                android:layout_height="11dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.3"
+                                                android:src="@drawable/white_add" />
+
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/viewcolor" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="25dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="WAXING - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Full Arms wax including Underarms (Honey)"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="THREADING - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Eyebrows Threading, Upper Lip Threading"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="FACIAL - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Fruit Cleanup by Sara"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="10dp"
+                            android:orientation="vertical"
+                            android:paddingBottom="15dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_showphotos"
+                                android:layout_width="match_parent"
+                                android:layout_height="70dp">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:weightSum="1">
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="0.7"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Prim \u0026 Proper"
+                                        android:textColor="@android:color/black"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="\u20B9 "
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold"
+                                            />
+
+                                        <TextView
+                                            android:id="@+id/tv2_price"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="1849"
+                                            android:textColor="@android:color/black"
+                                            android:textSize="13dp"
+                                            android:textStyle="bold" />
+
+                                        <FrameLayout
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="5dp">
+
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="sans-serif"
+                                                android:text="\u20B9 2600"
+                                                android:textColor="@android:color/black"
+                                                android:textSize="13dp"
+                                                android:textStyle="bold" />
+
+                                            <View
+                                                android:layout_width="40dp"
+                                                android:layout_height="1dp"
+                                                android:layout_gravity="center"
+                                                android:background="@android:color/black" />
+                                        </FrameLayout>
+
+                                        <ImageView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="4dp"
+
+                                            app:srcCompat="@drawable/ic_brightness_1_black_24dp" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="5dp"
+                                            android:layout_marginTop="5dp"
+                                            android:fontFamily="sans-serif"
+                                            android:text="29 % off"
+                                            android:textColor="#08AD0F"
+                                            android:textSize="12dp" />
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:fontFamily="sans-serif"
+                                        android:text="85 min"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="11dp" />
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_weight="0.3"
+                                    android:gravity="center">
+
+                                    <FrameLayout
+                                        android:layout_width="73dp"
+                                        android:layout_height="35dp">
+
+                                        <LinearLayout
+                                            android:id="@+id/ll2_add_service"
+                                            android:layout_width="73dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/add_back"
+                                            android:orientation="horizontal"
+                                            android:weightSum="1">
+
+                                            <TextView
+                                                android:layout_width="0dp"
+                                                android:layout_height="wrap_content"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.7"
+                                                android:gravity="center"
+                                                android:text="ADD"
+                                                android:textColor="#172EE2" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="31dp"
+                                                android:layout_gravity="center"
+                                                android:layout_marginRight="3dp"
+                                                android:layout_weight="0.3"
+                                                android:background="#ECE6E6">
+
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="12dp"
+                                                    android:layout_gravity="center"
+                                                    android:src="@drawable/add_icon" />
+                                            </LinearLayout>
+
+
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/ll2_increment"
+                                            android:layout_width="73dp"
+                                            android:layout_height="35dp"
+                                            android:background="@drawable/increment_back"
+                                            android:orientation="horizontal"
+                                            android:visibility="gone"
+                                            android:weightSum="1">
+
+                                            <ImageView
+                                                android:id="@+id/iv2_minus"
+                                                android:layout_width="0dp"
+                                                android:layout_height="11dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.3"
+                                                android:src="@drawable/remove" />
+
+                                            <LinearLayout
+                                                android:layout_width="0dp"
+                                                android:layout_height="33dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.4"
+                                                android:background="@android:color/white"
+                                                android:gravity="center">
+
+                                                <TextView
+                                                    android:id="@+id/tv2_count"
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_gravity="center"
+                                                    android:fontFamily="sans-serif"
+                                                    android:text="1"
+                                                    android:textColor="#172EE2"
+                                                    android:textSize="14dp"
+                                                    android:textStyle="bold" />
+                                            </LinearLayout>
+
+                                            <ImageView
+                                                android:id="@+id/iv2_add"
+                                                android:layout_width="0dp"
+                                                android:layout_height="11dp"
+                                                android:layout_gravity="center"
+                                                android:layout_weight="0.3"
+                                                android:src="@drawable/white_add" />
+
+
+                                        </LinearLayout>
+
+                                    </FrameLayout>
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="0.5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="15dp"
+                                android:background="@color/viewcolor" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_marginRight="25dp"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="WAXING - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Full Arms wax including Underarms (RICA)"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="MANICURE - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Rose Manicure"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="PEDICURE - "
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="sans-serif"
+                                        android:text="Rose Pedicure"
+                                        android:textColor="@color/textcolor"
+                                        android:textSize="13dp" />
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:paddingBottom="15dp">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_servicess_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                            </androidx.recyclerview.widget.RecyclerView>
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </ScrollView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="gone"
+            android:id="@+id/ll_summary"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_margin="10dp"
+            android:layout_weight="0.09"
+            android:background="@drawable/button_back"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <!--<TextView
+                android:visibility="gone"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />-->
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.1"/>
+            <TextView
+                android:id="@+id/tv_total_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="\u20B9 0"
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.35"
+                android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
+                android:drawablePadding="5dp"
+                android:gravity="right"
+                android:text="Summary "
+                android:textColor="@android:color/white"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.05" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

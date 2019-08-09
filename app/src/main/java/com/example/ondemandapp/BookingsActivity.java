@@ -59,7 +59,7 @@ public class BookingsActivity extends AppCompatActivity {
         }
         else {
             ll_login.setVisibility(View.GONE);
-            Toast.makeText(this, "Show Bookings", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, "Show Bookings", Toast.LENGTH_SHORT).show();
         }
 
 
