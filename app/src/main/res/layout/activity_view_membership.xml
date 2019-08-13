@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context=".ViewMembershipActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:background="@drawable/membership_back"
+                android:orientation="vertical">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.viewpager.widget.ViewPager
+                        android:id="@+id/vw_images"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp">
+
+                    </androidx.viewpager.widget.ViewPager>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
+                        android:layout_gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Wellness Membership"
+                            android:textColor="@android:color/white"
+                            android:textSize="16dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="130dp"
+                            android:layout_height="1dp"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="20dp"
+                            android:background="@android:color/white" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Save Extra 15% OFF on"
+                            android:textColor="@android:color/white"
+                            android:textSize="18dp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="15dp"
+                            android:fontFamily="sans-serif"
+                            android:gravity="center"
+                            android:text="Salon at home | Massage at home | Party makeup"
+                            android:textColor="@android:color/white"
+                            android:textSize="13dp"
+                            android:textStyle="bold" />
+
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/iv_member_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/ic_arrow_back_grey_24dp"
+                        android:layout_margin="10dp"/>
+
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:text="Choose your plan"
+                android:textColor="@android:color/black"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.08"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:background="@drawable/memberview_back"
+                    android:layout_height="180dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="0.39">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="12 months"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@android:color/black"/>
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
+                        android:background="@color/viewcolor"
+                        android:layout_marginTop="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="\u20B9 699"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="\u20B9 999"
+                                android:textColor="@color/textcolor"
+                                android:textSize="16dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                android:background="@color/textcolor"/>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:textSize="14dp"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/button_back"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:text="Add to cart"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.06"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:background="@drawable/memberview_back"
+                    android:layout_height="180dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_weight="0.39">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="6 months"
+                        android:textSize="18dp"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
+                        android:textColor="@android:color/black"/>
+
+                    <View
+                        android:layout_width="40dp"
+                        android:layout_height="1dp"
+                        android:background="@color/viewcolor"
+                        android:layout_marginTop="15dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:layout_marginTop="15dp"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:text="\u20B9 599"
+                            android:textColor="@android:color/black"
+                            android:textSize="16dp"
+                            android:layout_height="wrap_content"
+                            />
+
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:text="\u20B9 699"
+                                android:textColor="@color/textcolor"
+                                android:textSize="16dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_height="wrap_content"
+                                />
+
+                            <View
+                                android:layout_width="40dp"
+                                android:layout_height="1dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_gravity="center"
+                                android:background="@color/textcolor"/>
+                        </FrameLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="110dp"
+                        android:textSize="14dp"
+                        android:textColor="@android:color/white"
+                        android:background="@drawable/button_back"
+                        android:layout_height="45dp"
+                        android:gravity="center"
+                        android:layout_marginTop="25dp"
+                        android:text="Add to cart"/>
+
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.08"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/viewcolor"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:textColor="@android:color/black"
+                    android:textStyle="bold"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:fontFamily="sans-serif"
+                    android:text="50,000 Happy members..!"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_member_reviews"
+                    android:layout_width="match_parent"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
