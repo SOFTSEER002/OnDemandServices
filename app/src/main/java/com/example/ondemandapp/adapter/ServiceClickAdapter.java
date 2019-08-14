@@ -2,6 +2,7 @@ package com.example.ondemandapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,6 +21,9 @@ public class ServiceClickAdapter extends BaseAdapter {
 Intent intent;
     Context context;
     List<ServiceClickModel> servicelist;
+    SharedPreferences sp_bookinglist;
+    SharedPreferences.Editor ed_bookinglist;
+
     public ServiceClickAdapter(Context context, List<ServiceClickModel> servicelist) {
         this.context = context;
         this.servicelist = servicelist;
@@ -46,6 +50,8 @@ Intent intent;
             view = LayoutInflater.from(context).inflate(R.layout.custom_service_click, viewGroup, false);
 
         }
+        sp_bookinglist = context.getSharedPreferences("BOOKINGSERVICE", Context.MODE_PRIVATE);
+        ed_bookinglist = sp_bookinglist.edit();
 
         ImageView iv_image=view.findViewById(R.id.iv_image);
         TextView tv_text=view.findViewById(R.id.tv_text);
@@ -60,6 +66,9 @@ Intent intent;
                 intent=new Intent(context, SingleServiceListActivity.class);
                 intent.putExtra("ClickServiceId",servicelist.get(i).getId());
                 context.startActivity(intent);
+
+                ed_bookinglist.putString("serviceee_type",servicelist.get(i).getText());
+                ed_bookinglist.commit();
             }
         });
         return view;

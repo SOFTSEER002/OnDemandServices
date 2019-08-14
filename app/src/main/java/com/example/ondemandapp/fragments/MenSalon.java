@@ -81,7 +81,7 @@ public class MenSalon extends Fragment {
         rv_men=v.findViewById(R.id.rv_men);
 
         womenlist.clear();
-        womenlist.add(new Womenmodel("Men's Haircut \u0026 Grooming",R.drawable.men_haircut,"3"));
+        womenlist.add(new Womenmodel("Men Haircut \u0026 Grooming",R.drawable.men_haircut,"3"));
 
         rv_men.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
         womenAdapter=new WomenAdapter(getActivity(),womenlist);

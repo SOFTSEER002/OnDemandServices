@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@android:color/white"
-    tools:context=".SaveAddressActivity">
+    tools:context=".DateTimeActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -79,6 +79,7 @@
                 android:layout_height="wrap_content">
 
                 <LinearLayout
+                    android:id="@+id/ll1_date"
                     android:layout_width="70dp"
                     android:orientation="vertical"
                     android:gravity="center"
@@ -86,16 +87,18 @@
                     android:layout_height="70dp">
 
                     <TextView
+                        android:id="@+id/tv1_day"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textcolor"
                         android:textSize="14dp"
-                        android:text="Wed"/>
+                        android:text="Thu"/>
 
                     <TextView
+                        android:id="@+id/tv1_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="14"
+                        android:text="15"
                         android:fontFamily="sans-serif"
                         android:textSize="16dp"
                         android:layout_marginTop="10dp"
@@ -104,6 +107,7 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/ll2_date"
                     android:layout_width="70dp"
                     android:orientation="vertical"
                     android:gravity="center"
@@ -112,16 +116,18 @@
                     android:layout_height="70dp">
 
                     <TextView
+                        android:id="@+id/tv2_day"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/textcolor"
                         android:textSize="14dp"
-                        android:text="Thu"/>
+                        android:text="Fri"/>
 
                     <TextView
+                        android:id="@+id/tv2_date"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="15"
+                        android:text="16"
                         android:fontFamily="sans-serif"
                         android:textSize="16dp"
                         android:layout_marginTop="10dp"
@@ -143,14 +149,33 @@
                 android:text="At what time should the professional arrive ?"
                 android:layout_height="wrap_content" />
 
-            <GridView
+           <!-- <GridView
                 android:id="@+id/rv_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/white"
                 android:gravity="center"
                 android:numColumns="2"
-                android:smoothScrollbar="true" />
+                android:verticalSpacing="10dp"
+                android:horizontalSpacing="10dp"
+                android:smoothScrollbar="true" />-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:background="@android:color/white"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </androidx.recyclerview.widget.RecyclerView>
+            </LinearLayout>
+
+
 
         </LinearLayout>
 
@@ -159,6 +184,7 @@
             android:layout_height="0dp"
             android:layout_weight="0.09">
             <LinearLayout
+                android:id="@+id/ll_proceedpay"
                 android:layout_width="match_parent"
                 android:background="@drawable/button_back"
                 android:gravity="center"
@@ -172,12 +198,12 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:textStyle="bold"
-                    android:textSize="13dp"
+                    android:textSize="15dp"
                     android:drawablePadding="5dp"
                     android:drawableRight="@drawable/ic_arrow_forward_black_24dp"
                     android:fontFamily="sans-serif"
                     android:textColor="@android:color/white"
-                    android:text="Save Address"
+                    android:text="Proceed to pay"
                     />
 
             </LinearLayout>

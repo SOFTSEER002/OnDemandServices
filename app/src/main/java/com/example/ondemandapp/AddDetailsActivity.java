@@ -1,6 +1,7 @@
 package com.example.ondemandapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.Manifest;
 import android.content.Context;
@@ -41,7 +42,7 @@ import java.util.Locale;
 
 public class AddDetailsActivity extends AppCompatActivity implements LocationListener, OnMapReadyCallback {
     GoogleMap map;
-    TextView tv_location,tv_save_address;
+    TextView tv_location,tv_save_address,tv_home,tv_other,tv_office;
     double latitude, longitude;
     SharedPreferences sp_location;
     Marker marker;
@@ -65,6 +66,9 @@ public class AddDetailsActivity extends AppCompatActivity implements LocationLis
         spinner_gender = findViewById(R.id.spinner_gender);
         iv_details_back = findViewById(R.id.iv_details_back);
         tv_save_address = findViewById(R.id.tv_save_address);
+        tv_home = findViewById(R.id.tv_home);
+        tv_office = findViewById(R.id.tv_office);
+        tv_other = findViewById(R.id.tv_other);
         context = this;
 
 
@@ -121,11 +125,47 @@ public class AddDetailsActivity extends AppCompatActivity implements LocationLis
         tv_save_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(AddDetailsActivity.this,SaveAddressActivity.class));
+                startActivity(new Intent(AddDetailsActivity.this, DateTimeActivity.class));
             }
         });
 
 
+        tv_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv_home.setTextColor(getResources().getColor(R.color.white));
+                tv_home.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_blueback));
+                tv_office.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_office.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+                tv_other.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_other.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+
+            }
+        });
+
+        tv_office.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv_office.setTextColor(getResources().getColor(R.color.white));
+                tv_office.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_blueback));
+                tv_home.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_home.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+                tv_other.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_other.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+            }
+        });
+
+        tv_other.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                tv_other.setTextColor(getResources().getColor(R.color.white));
+                tv_other.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_blueback));
+                tv_office.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_office.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+                tv_home.setTextColor(getResources().getColor(R.color.textcolor));
+                tv_home.setBackground(ContextCompat.getDrawable(context, R.drawable.saveas_back));
+            }
+        });
     }
 
     private boolean isGooglePlayServicesAvailable() {

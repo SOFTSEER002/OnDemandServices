@@ -176,16 +176,18 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/tv_home"
                         android:layout_width="60dp"
-                        android:layout_height="wrap_content"
-                        android:text="HOME"
-                        android:padding="5dp"
-                        android:gravity="center"
-                        android:textSize="12dp"
+                        android:layout_height="match_parent"
                         android:background="@drawable/saveas_back"
-                        android:textColor="@color/textcolor"/>
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="HOME"
+                        android:textColor="@color/textcolor"
+                        android:textSize="12dp" />
 
                     <TextView
+                        android:id="@+id/tv_office"
                         android:layout_width="65dp"
                         android:layout_height="wrap_content"
                         android:text="OFFICE"
@@ -197,6 +199,7 @@
                         android:textColor="@color/textcolor"/>
 
                     <TextView
+                        android:id="@+id/tv_other"
                         android:layout_width="63dp"
                         android:layout_height="wrap_content"
                         android:text="OTHER"

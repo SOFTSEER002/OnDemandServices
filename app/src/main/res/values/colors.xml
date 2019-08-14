@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#F97544</color>
-    <color name="darkorange">#E76434</color>
-    <color name="colorPrimaryDark">#615D5B</color>
-    <color name="colorAccent">#000000</color>
-    <color name="orange">#F97544</color>
-    <color name="toolbar">#272423</color>
-    <color name="textcolor">#706A67</color>
-    <color name="viewcolor">#D3D0D0</color>
-    <color name="white">#ffffff</color>
+<color name="colorPrimary">#F97544</color>
+<color name="darkorange">#E76434</color>
+<color name="colorPrimaryDark">#615D5B</color>
+<color name="colorAccent">#000000</color>
+<color name="orange">#F97544</color>
+<color name="toolbar">#272423</color>
+<color name="textcolor">#706A67</color>
+<color name="viewcolor">#D3D0D0</color>
+<color name="white">#ffffff</color>
+<color name="blue">#0828CF</color>
+<color name="black">#000000</color>
+<color name="green">#27A50A</color>
 </resources>

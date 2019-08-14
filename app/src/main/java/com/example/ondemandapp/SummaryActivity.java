@@ -3,6 +3,7 @@ package com.example.ondemandapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -12,6 +13,8 @@ public class SummaryActivity extends AppCompatActivity {
 ImageView iv_summary_back;
 String summarytotal;
 TextView tv_total_summary,tv_totall,tv_single_price,tv_final_total,tv_membership,tv_skip;
+SharedPreferences sp_total;
+SharedPreferences.Editor ed_total;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +28,11 @@ TextView tv_total_summary,tv_totall,tv_single_price,tv_final_total,tv_membership
         tv_skip=findViewById(R.id.tv_skip);
 
         summarytotal=getIntent().getStringExtra("SumSummary");
+
+        sp_total=getSharedPreferences("BOOKINGSERVICE",MODE_PRIVATE);
+        ed_total=sp_total.edit();
+        ed_total.putString("sum",summarytotal);
+        ed_total.commit();
 
         tv_total_summary.setText("\u20B9 "+summarytotal);
         tv_totall.setText("\u20B9 "+summarytotal);

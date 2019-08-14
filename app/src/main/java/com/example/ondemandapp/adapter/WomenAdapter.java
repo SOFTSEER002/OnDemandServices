@@ -2,6 +2,7 @@ package com.example.ondemandapp.adapter;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,6 +23,8 @@ public class WomenAdapter extends RecyclerView.Adapter<WomenAdapter.ViewHolder> 
     Context context;
     List<Womenmodel> womenlist;
     Intent intent;
+    SharedPreferences sp_bookinglist;
+    SharedPreferences.Editor ed_bookinglist;
 
     public WomenAdapter(Context context, List<Womenmodel> womenlist) {
         this.context = context;
@@ -43,9 +46,12 @@ public class WomenAdapter extends RecyclerView.Adapter<WomenAdapter.ViewHolder> 
         holder.ll_singlelayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent=new Intent(context, ServiceClickActivity.class);
-                intent.putExtra("TypeServiceId",womenlist.get(position).getId());
+                intent = new Intent(context, ServiceClickActivity.class);
+                intent.putExtra("TypeServiceId", womenlist.get(position).getId());
                 context.startActivity(intent);
+
+                ed_bookinglist.putString("servicee_name",womenlist.get(position).getType());
+                ed_bookinglist.commit();
             }
         });
     }
@@ -66,7 +72,8 @@ public class WomenAdapter extends RecyclerView.Adapter<WomenAdapter.ViewHolder> 
             tv_women = itemView.findViewById(R.id.tv_women);
             ll_singlelayout = itemView.findViewById(R.id.ll_singlelayout);
 
-
+            sp_bookinglist = context.getSharedPreferences("BOOKINGSERVICE", Context.MODE_PRIVATE);
+            ed_bookinglist = sp_bookinglist.edit();
         }
     }
 }
