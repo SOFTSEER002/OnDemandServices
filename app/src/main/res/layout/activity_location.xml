@@ -3,9 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".TabListActivity">
+    android:layout_height="match_parent"
+    tools:context=".LocationActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
@@ -19,7 +19,7 @@
             android:weightSum="1">
 
             <ImageView
-                android:id="@+id/iv_services_back"
+                android:id="@+id/iv_location_back"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -30,40 +30,37 @@
             <Space
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_weight="0.1" />
+                android:layout_weight="0.2" />
 
             <TextView
-                android:id="@+id/tv_toolbar"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
-                android:layout_weight="0.78"
-                android:text="ALL SERVICES"
+                android:layout_weight="0.68"
                 android:fontFamily="sans-serif"
+                android:text="Search Location"
                 android:textColor="@android:color/white"
-                android:textSize="17dp"
+                android:textSize="16dp"
                 android:textStyle="bold" />
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
-
-
-        <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tabs"
-            android:background="@color/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:tabMode="scrollable"
-            app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-            app:tabIndicatorColor="@color/darkorange" />
-
-
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
+    <EditText
+        android:id="@+id/et_locationsearch"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+        android:layout_height="40dp"
+        android:layout_margin="2dp"
+        android:hint="Search Location"
+        android:paddingLeft="10dp"
+        android:background="@drawable/search_background"
+        />
+    <ListView
+        android:id="@+id/lv_location"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </ListView>
 
 </LinearLayout>

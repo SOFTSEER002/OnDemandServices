@@ -6,16 +6,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class AboutUsActivity extends AppCompatActivity {
-ImageView iv_about_back;
+public class ContactusActivity extends AppCompatActivity {
+ImageView iv_contact_back;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_about_us);
+        setContentView(R.layout.activity_contactus);
+        iv_contact_back=findViewById(R.id.iv_contact_back);
 
-        iv_about_back=findViewById(R.id.iv_about_back);
-
-        iv_about_back.setOnClickListener(new View.OnClickListener() {
+        iv_contact_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();

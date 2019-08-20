@@ -27,18 +27,18 @@ import java.util.TimerTask;
 import me.relex.circleindicator.CircleIndicator;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-   // GridView gv_category;
-    TextView tv_txtt1,tv_txtt2;
+    // GridView gv_category;
+    TextView tv_txtt1, tv_txtt2,tv_loc1,tv_loc2;
     List<GridServicesModel> servicelist = new ArrayList<>();
-    LinearLayout ll_women,ll_men,ll_cleaning,ll_electrician,ll_appliances,ll_massage,ll_yoga,ll_painting,ll_pest;
-   //GridServiceAdapter serviceAdapter;
+    LinearLayout ll_women, ll_men, ll_cleaning, ll_electrician, ll_appliances, ll_massage, ll_yoga, ll_painting, ll_pest, ll_location;
+    //GridServiceAdapter serviceAdapter;
 
     private static ViewPager mPager;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
     private static final Integer[] IMAGES = {R.drawable.cleaning_one, R.drawable.beauty_three, R.drawable.development_four, R.drawable.repair_two};
     private ArrayList<Integer> ImagesArray = new ArrayList<Integer>();
- //   LinearLayout ll_resources, ll_business, ll_lifestyle;
+    //   LinearLayout ll_resources, ll_business, ll_lifestyle;
     Intent i;
 
     @Override
@@ -49,29 +49,32 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mPager = findViewById(R.id.pager);
         tv_txtt1 = findViewById(R.id.tv_txtt1);
         tv_txtt2 = findViewById(R.id.tv_txtt2);
+        ll_location = findViewById(R.id.ll_location);
+        tv_loc1 = findViewById(R.id.tv_loc1);
+        tv_loc2 = findViewById(R.id.tv_loc2);
 
         Typeface custom_font = Typeface.createFromAsset(getAssets(), "font/font.ttf");
         //tv_txtt1.setTypeface(custom_font);
         //tv_txtt2.setTypeface(custom_font);
         //gv_category = findViewById(R.id.gv_category);
 
-       // ll_resources = findViewById(R.id.ll_resources);
-       // ll_business = findViewById(R.id.ll_business);
-       // ll_lifestyle = findViewById(R.id.ll_lifestyle);
+        // ll_resources = findViewById(R.id.ll_resources);
+        // ll_business = findViewById(R.id.ll_business);
+        // ll_lifestyle = findViewById(R.id.ll_lifestyle);
 
         //ll_lifestyle.setOnClickListener(this);
-       // ll_business.setOnClickListener(this);
-      //  ll_resources.setOnClickListener(this);
+        // ll_business.setOnClickListener(this);
+        //  ll_resources.setOnClickListener(this);
 
-        ll_women=findViewById(R.id.ll_women);
-        ll_men=findViewById(R.id.ll_men);
-        ll_cleaning=findViewById(R.id.ll_cleaning);
-        ll_electrician=findViewById(R.id.ll_electrician);
-        ll_appliances=findViewById(R.id.ll_appliances);
-        ll_massage=findViewById(R.id.ll_massage);
-        ll_yoga=findViewById(R.id.ll_yoga);
-        ll_painting=findViewById(R.id.ll_painting);
-        ll_pest=findViewById(R.id.ll_pest);
+        ll_women = findViewById(R.id.ll_women);
+        ll_men = findViewById(R.id.ll_men);
+        ll_cleaning = findViewById(R.id.ll_cleaning);
+        ll_electrician = findViewById(R.id.ll_electrician);
+        ll_appliances = findViewById(R.id.ll_appliances);
+        ll_massage = findViewById(R.id.ll_massage);
+        ll_yoga = findViewById(R.id.ll_yoga);
+        ll_painting = findViewById(R.id.ll_painting);
+        ll_pest = findViewById(R.id.ll_pest);
 
         ll_women.setOnClickListener(this);
         ll_men.setOnClickListener(this);
@@ -155,8 +158,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         servicelist.add(new GridServicesModel("App Development", R.drawable.app_development));
         servicelist.add(new GridServicesModel("Web Designer", R.drawable.website_design));
 
-     //   serviceAdapter = new GridServiceAdapter(MainActivity.this, servicelist);
-      //  gv_category.setAdapter(serviceAdapter);
+
+
+
+        Intent i = getIntent();
+        String valuelocation=i.getStringExtra("LocationSave");
+        if(valuelocation!=null){
+            tv_loc1.setText(valuelocation);
+            tv_loc2.setText(valuelocation+", India");
+        }
+        ll_location.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, LocationActivity.class));
+            }
+        });
+
+        //   serviceAdapter = new GridServiceAdapter(MainActivity.this, servicelist);
+        //  gv_category.setAdapter(serviceAdapter);
 
         navView.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
     }
@@ -179,7 +198,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     return true;
 
 
-
             }
             return false;
         }
@@ -188,24 +206,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View view) {
         switch (view.getId()) {
-           /* case R.id.ll_lifestyle:
-                i = new Intent(MainActivity.this, Categories.class);
-                i.putExtra("CategoryType", "Lifestyle");
-                startActivity(i);
-                break;
-
-            case R.id.ll_business:
-                i = new Intent(MainActivity.this, Categories.class);
-                i.putExtra("CategoryType", "Business");
-                startActivity(i);
-                break;
-
-            case R.id.ll_resources:
-                i = new Intent(MainActivity.this, Categories.class);
-                i.putExtra("CategoryType", "Resources");
-                startActivity(i);
-                break;*/
-
             case R.id.ll_women:
                 i = new Intent(MainActivity.this, TabListActivity.class);
                 i.putExtra("CategoryType", "women");
@@ -257,10 +257,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 i.putExtra("CategoryType", "pest");
                 startActivity(i);
                 break;
-
-
-
-
 
 
         }

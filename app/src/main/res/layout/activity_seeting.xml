@@ -50,6 +50,107 @@
     </androidx.appcompat.widget.Toolbar>
 
     <LinearLayout
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="13dp"
+                android:textColor="@color/textcolor"
+                android:text="sneha"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="13dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/textcolor"
+                android:text="sneha@gmail.com"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:textSize="13dp"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/textcolor"
+                android:text="9787878697"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.2">
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/viewcolor"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/login"
+            android:layout_weight="0.07"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+        <TextView
+            android:id="@+id/login"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Login"
+            android:fontFamily="sans-serif"
+            android:textSize="16dp"
+            android:textColor="@android:color/black"
+            android:layout_weight="0.88"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/viewcolor"/>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -78,7 +179,6 @@
            android:text="Privacy Policy"
             android:fontFamily="sans-serif"
             android:textSize="16dp"
-            android:textStyle="bold"
             android:textColor="@android:color/black"
             android:layout_weight="0.88"/>
 
@@ -120,8 +220,6 @@
             android:text="Terms &amp; Conditions"
             android:fontFamily="sans-serif"
             android:textSize="16dp"
-            android:textStyle="bold"
-
             android:textColor="@android:color/black"
             android:layout_weight="0.88"/>
 
@@ -163,7 +261,6 @@
             android:text="Contact us"
             android:fontFamily="sans-serif"
             android:textSize="16dp"
-            android:textStyle="bold"
 
             android:textColor="@android:color/black"
             android:layout_weight="0.88"/>
@@ -206,8 +303,50 @@
             android:text="About us"
             android:fontFamily="sans-serif"
             android:textSize="16dp"
-            android:textStyle="bold"
 
+            android:textColor="@android:color/black"
+            android:layout_weight="0.88"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/viewcolor"/>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="15dp">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:src="@drawable/shareapp"
+            android:layout_weight="0.07"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.05"/>
+
+        <TextView
+            android:id="@+id/share"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:text="Share app"
+            android:fontFamily="sans-serif"
+            android:textSize="16dp"
             android:textColor="@android:color/black"
             android:layout_weight="0.88"/>
 
@@ -233,7 +372,7 @@
         <ImageView
             android:layout_width="0dp"
             android:layout_height="30dp"
-            android:src="@drawable/login"
+            android:src="@drawable/rateus"
             android:layout_weight="0.07"/>
 
         <Space
@@ -242,15 +381,13 @@
             android:layout_weight="0.05"/>
 
         <TextView
-            android:id="@+id/login"
+            android:id="@+id/rate"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_gravity="center"
-            android:text="Login"
+            android:text="Rate Us"
             android:fontFamily="sans-serif"
             android:textSize="16dp"
-            android:textStyle="bold"
-
             android:textColor="@android:color/black"
             android:layout_weight="0.88"/>
 

@@ -44,7 +44,7 @@ PestFragment.OnFragmentInteractionListener{
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        tabLayout.setTabTextColors(getResources().getColor(R.color.white),getResources().getColor(R.color.white));
+        tabLayout.setTabTextColors(getResources().getColor(R.color.white),getResources().getColor(R.color.darkorange));
 
         String categoryy=getIntent().getStringExtra("CategoryType");
         if(categoryy.equals("women")){

@@ -22,7 +22,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".PlaceRequestActivity"></activity>
+        <activity android:name=".LocationActivity"></activity>
+        <activity android:name=".ContactusActivity" />
+        <activity android:name=".PlaceRequestActivity" />
         <activity android:name=".PaymentActivity" />
         <activity android:name=".DateTimeActivity" />
         <!--
